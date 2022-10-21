@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>Bookshelf Apps</title>
+      <!-- font awesome icon -->
+      <script src="https://kit.fontawesome.com/d66a7a980c.js" crossorigin="anonymous"></script>
+      <!-- css -->
+      <link rel="stylesheet" href="style.css" />
+      <!-- box icons -->
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   </head>
+   <body>
+      <header class="orang_tua">
+         <h1 class="orang_tua_title"><i class='bx bx-book-open'></i>Bookshelf Apps<i class='bx bx-book-open'></i></h1>
+      </header>
+      <main>
+         <section class="kakek_section">
+            <h2><i class='bx bx-book-add bx-tada' ></i>Masukkan Buku Baru<i class='bx bx-book-add bx-tada' ></i></h2>
+            <form id="inputBook">
+               <div class="ayah">
+                  <label for="inputBookTitle">Judul</label>
+                  <input id="inputBookTitle" class="border" type="text" required />
+               </div>
+               <div class="ayah">
+                  <label for="inputBookAuthor">Penulis</label>
+                  <input id="inputBookAuthor" class="border" type="text" required />
+               </div>
+               <div class="ayah">
+                  <label for="inputBookYear">Tahun Terbit</label>
+                  <input id="inputBookYear" class="border" type="number" min="1990" value="2022" required />
+               </div>
+               <div class="ayah_inline">
+                  <label for="inputBookIsComplete">Selesai dibaca</label>
+                  <input id="inputBookIsComplete" type="checkbox" />
+               </div>
+               <button id="bookSubmit" type="submit" class="ayah-tiri">Tambahkan Buku Ke Rak</button>
+            </form>
+         </section>
+
+         <section class="nenek_section">
+            <h2><i class='bx bx-bookmark-alt-plus bx-tada' ></i>Cari Buku pada Rak<i class='bx bx-bookmark-alt-plus bx-tada' ></i></h2>
+            <form id="searchBook">
+               <label for="searchBookTitle">Judul</label>
+               <input id="searchBookTitle" type="text" placeholder="masukkan judul buku" />
+               <button id="searchSubmit" type="submit" class="ayah-tiri"><i class='bx bx-search bx-flashing' ></i></button>
+            </form>
+         </section>
+
+         <section class="ibu">
+            <button id="resetRak" class="mamah" onclick="resetRak()"><i class="fa-solid fa-trash"></i> Kosongkan Rak</button>
+            <div class="ibu_kandung ibu_tiri">
+               <h2>Belum selesai dibaca</h2>
+               <div id="incompleteBookshelfList" class="bunda">
+                  <!-- element is the result of the showBook function -->
+               </div>
+            </div>
+
+            <div class="ibu_kandung">
+               <h2>Sudah selesai dibaca</h2>
+               <div id="completeBookshelfList" class="bunda">
+                  <!-- element is the result of the showBook function -->
+               </div>
+            </div>
+         </section>
+         <section class="kakek_section input_edit_section">
+            <form id="editData">
+               <div class="ayah">
+                  <label for="inputEditTitle">Judul</label>
+                  <input id="inputEditTitle" type="text" required />
+               </div>
+               <div class="ayah">
+                  <label for="inputEditAuthor">Penulis</label>
+                  <input id="inputEditAuthor" type="text" required />
+               </div>
+               <div class="ayah">
+                  <label for="inputEditYear">Tahun Terbit</label>
+                  <input id="inputEditYear" type="number" value="2022" required />
+               </div>
+               <button id="bookEditCancel">Batal</button>
+               <button id="bookEditSubmit" type="submit" class="ayah-tiri">Simpan</button>
+            </form>
+         </section>
+      </main>
+      <footer>
+         <div class="social-media">
+            <a href="https://github.com/nazri30" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
+            <a href="https://www.instagram.com/nazrie_86/?hl=id" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="https://www.youtube.com/channel/UCfIG9p3Cy4Le9k0J5eOdoTQ" target="_blank"><i class="fa-brands fa-youtube fa-xl"></i></a>
+            <a href="https://www.youtube.com/channel/UCfIG9p3Cy4Le9k0J5eOdoTQ" target="_blank"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+         </div>
+         <p>&copy;CopyRight created with <i class="fa-solid fa-heart"></i> by Nazrie Abdullah Zahid</p>
+      </footer>
+
+      <!-- sweetalert cdn -->
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <!-- js -->
+      <script src="main.js"></script>
+   </body>
+</html>
